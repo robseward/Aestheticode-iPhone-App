@@ -19,7 +19,7 @@
 	UIToolbar *toolBar=[[[UIToolbar alloc] initWithFrame:CGRectMake(0, 480-44, 320, 44)] autorelease];
 	NSArray *items=[NSArray arrayWithObjects:
 					[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace  target:nil action:nil] autorelease],
-					[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone  target:self action:@selector(finishedAugmentedReality)] autorelease],
+					[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone  target:self action:@selector(finishedDecoding)] autorelease],
 					nil];
 	[toolBar setItems:items];
 	// create the overlay view
@@ -54,7 +54,7 @@
 	processingTimer=[NSTimer scheduledTimerWithTimeInterval:1/15.0f target:self selector:@selector(processImage) userInfo:nil repeats:YES];
 }
 
--(void) finishedAugmentedReality {
+-(void) finishedDecoding {
 	[self dismissModalViewControllerAnimated:YES];
 	[processingTimer invalidate];
 	overlayView=nil;

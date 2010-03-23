@@ -1,8 +1,6 @@
 //
-//  AugmentedRealitySampleViewController.h
-//  AugmentedRealitySample
-//
-//  Created by Chris Greening on 01/01/2010.
+// Rob Seward 
+// 03/2010
 //
 
 #import <UIKit/UIKit.h>
